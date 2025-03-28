@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Dairy Products - Tolichowki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #27ae60;
+        }
+        .product-list {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .contact a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>GK Dairy Products</h1>
+        <h3>Fresh & Pure Dairy Products in Tolichowki</h3>
+        
+        <h2>Our Products:</h2>
+        <ul class="product-list">
+            <li>🥛 Fresh Milk</li>
+            <li>🧈 Pure Ghee</li>
+            <li>🧀 Cheese</li>
+            <li>🍶 Curd (Dahi)</li>
+            <li>🥛 Flavored Milk</li>
+            <li>🍦 Ice Creams</li>
+            <li>🥛 Butter Milk</li>
+            <li>🥚 Fresh Eggs</li>
+        </ul>
+
+        <div class="contact">
+            📍 Location: Tolichowki, Hyderabad <br>
+            📞 Call us: <a href="tel:+918125407637">8125407637</a>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script>
+        function initMap() {
+            var location = { lat: 17.3951, lng: 78.4126 }; // Tolichowki, Hyderabad
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "GK Dairy Products - Tolichowki",
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>
